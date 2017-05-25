@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PasswordValidator</string>
+
+    <!-- Strings related to validation -->
+    <string name="validate">Validate</string>
+    <string name="password">Password</string>
+</resources>
