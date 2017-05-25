@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
  */
 public class ExampleUnitTest {
 
-    String validPW = "valid-password";
+    String validPW = "BeaDogArthur;)";
 
     @Test
     public void testLaziness() throws Exception {
@@ -21,6 +21,22 @@ public class ExampleUnitTest {
     @Test
     public void testLength() throws Exception {
         assertTrue(Password.isLongEnough(validPW));
+    }
+
+    @Test
+    public void testContainsWinkingEmoji() throws Exception {
+        assertTrue(Password.containsWinkingEmoji(validPW));
+    }
+
+    @Test
+    public void testContainsGoldenGirlsStar() throws Exception {
+        assertTrue(Password.containsGoldenGirlsStar(validPW));
+    }
+
+    @Test
+    public void testContainsCommonHouseholdAnimalWithOnlyThreeLettersAndNoRatDoesNotCount()
+        throws Exception {//because formatting matters
+        assertTrue(Password.containsCommonHouseholdAnimalWithOnlyThreeLettersAndNoRatDoesNotCount(validPW));
     }
 
 }
