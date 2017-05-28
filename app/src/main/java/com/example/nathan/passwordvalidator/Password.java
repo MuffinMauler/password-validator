@@ -29,4 +29,19 @@ public class Password {
         return (pw.toLowerCase().contains("cat") || pw.toLowerCase().contains("dog"));
     }
 
+    public static int getStrength(String pw){
+        int str = 0;
+        if (isNotPassword(pw))
+            str++;
+        if (isLongEnough(pw))
+            str++;
+        if (containsWinkingEmoji(pw))
+            str++;
+        if (containsGoldenGirlsStar(pw))
+            str++;
+        if (containsCommonHouseholdAnimalWithOnlyThreeLettersAndNoRatDoesNotCount(pw))
+            str++;
+        return str;
+    }
+
 }

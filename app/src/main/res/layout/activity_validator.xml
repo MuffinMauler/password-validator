@@ -23,11 +23,20 @@
 
 
     <Button
+        android:id="@+id/validate_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/validate"
         android:onClick="setPassword"
         android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/display_strength"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:text="@string/password_strength"
+        android:gravity="center"/>
 
 </LinearLayout>
